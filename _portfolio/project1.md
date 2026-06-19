@@ -5,7 +5,7 @@ image: assets/img/portfolio/chop-wood-carry-water--stellar-mammals-album-cover.j
 alt: Stellar Mammals Chop Wood Carry Water album art
 
 caption:
-  title: Stellar Mammals - Cosmic Coastlines
+  title: Stellar Mammals - Chop Wood, Carry Water
   subtitle: Music Album + Cover Art
   thumbnail: assets/img/portfolio/chop-wood-carry-water--stellar-mammals-album-cover-thumbnail.jpg
 ---

@@ -6,6 +6,12 @@ gem "jekyll-remote-theme"
 gem "kramdown-parser-gfm"
 gem "webrick"
 
+# Ruby 3.4 removed these from the default gems; Jekyll 4.2 still requires them.
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   # gem "github-pages" # https://github.com/github/pages-gem

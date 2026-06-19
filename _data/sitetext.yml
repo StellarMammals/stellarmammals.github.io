@@ -1,14 +1,14 @@
 en: &DEFAULT_EN
   header:
     title: Instrumental Music For Flow-inducing doings. Jazzy. Energizing. Distraction-free.
-    body: "<a href='https://open.spotify.com/album/5ygTiRD5rzGDgFdxbx3Ev4?si=NeCvjNqmTcO1fUAEJYzf0w'><img src='../assets/img/portfolio/chop-wood-carry-water--stellar-mammals-album-cover.jpg'></a>"
+    body: "<a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'><img src='../assets/img/portfolio/forwards-and-towards-stellar-mammals-album-cover.jpg'></a>"
     button: Listen on Spotify
-    buttonlink: "https://open.spotify.com/album/5ygTiRD5rzGDgFdxbx3Ev4?si=NeCvjNqmTcO1fUAEJYzf0w"
+    buttonlink: "https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg"
 
   about:
-    title: "Chop Wood, Carry Water by Stellar Mammals & Jacob Burgdorf"
+    title: "Forwards & Towards by Stellar Mammals & Jacob Burgdorf"
     text: "Music for creatives. Jazzy, energizing lofi beats for flow and concentrated, distraction-free doings."
-    body: "<a href='https://open.spotify.com/album/5ygTiRD5rzGDgFdxbx3Ev4?si=NeCvjNqmTcO1fUAEJYzf0w'><img style='width: 100%; max-width: 450px;' src='../assets/img/portfolio/chop-wood-carry-water--stellar-mammals-album-cover.jpg'></a><br/> <br/> Listen on <a href='https://open.spotify.com/album/5ygTiRD5rzGDgFdxbx3Ev4?si=NeCvjNqmTcO1fUAEJYzf0w'>Spotify</a>, <a href='https://music.apple.com/us/album/chop-wood-carry-water/1766902448'>Apple Music</a>, <a href='https://music.amazon.com/albums/B0DG4ZPB4V'>Amazon Music</a>, <a href='https://music.youtube.com/playlist?list=OLAK5uy_nYZbkZK7ls_XaaOCyBZNP51NCAZeqHTv0'>YouTube Music</a> and other streaming platforms. <br /> <br /> <em>[Check out our Liner Notes](http://www.markwk.com/chop-wood-carry-water-stellar-mammals-jacob-burgdorf-album.html)</em>"
+    body: "<a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'><img style='width: 100%; max-width: 450px;' src='../assets/img/portfolio/forwards-and-towards-stellar-mammals-album-cover.jpg'></a><br/> <br/> Listen on <a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'>Spotify</a>, <a href='https://music.apple.com/us/album/forwards-towards/1827335629'>Apple Music</a>, <a href='https://music.amazon.com/albums/B0FHXX3GBK'>Amazon Music</a>, <a href='https://www.youtube.com/watch?v=bakqHwhlCh8&list=OLAK5uy_nPH1jzIe0d0CDjFXxMI2hTSnt9XMcFbbE'>YouTube Music</a> and other streaming platforms. <br /> <br /> <em>[Check out our Liner Notes](http://www.markwk.com/forwards-and-towards-stellar-mammals-album.html)</em>"
     section: about
 
   footer:
@@ -18,6 +18,8 @@ en: &DEFAULT_EN
         icon: "fab fa-twitter"
       - url: https://www.instagram.com/stellarmammals/
         icon: "fab fa-instagram"
+      - url: https://www.youtube.com/@stellarmammals
+        icon: "fab fa-youtube"
 en-US:
   <<: *DEFAULT_EN
 en-CA:

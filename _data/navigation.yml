@@ -12,21 +12,21 @@
 en: &DEFAULT_EN
   nav:
     - title: "Listen on Spotify"
-      url: https://open.spotify.com/album/1E5P1sZQ3glLRHbxMt1wiM?si=y5PpLkytQZyi1J7ZeWphrA 
-    #- title: News and updates 
+      url: https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg
+    #- title: News and updates
     #  url: https://stellarmammals.substack.com/
     - title: "More"
       url: http://www.markwk.com
-  
+
   streaming_links:
   - name: Spotify
-    url: "https://open.spotify.com/album/5ygTiRD5rzGDgFdxbx3Ev4?si=NeCvjNqmTcO1fUAEJYzf0w"
+    url: "https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg"
   - name: Apple Music
-    url: "https://music.apple.com/us/album/chop-wood-carry-water/1766902448"
+    url: "https://music.apple.com/us/album/forwards-towards/1827335629"
   - name: Amazon Music
-    url: "https://music.amazon.com/albums/B0DG4ZPB4V"
+    url: "https://music.amazon.com/albums/B0FHXX3GBK"
   - name: YouTube Music
-    url: "https://music.youtube.com/playlist?list=OLAK5uy_nYZbkZK7ls_XaaOCyBZNP51NCAZeqHTv0"
+    url: "https://www.youtube.com/watch?v=bakqHwhlCh8&list=OLAK5uy_nPH1jzIe0d0CDjFXxMI2hTSnt9XMcFbbE"
   
 en-US:
   <<: *DEFAULT_EN
