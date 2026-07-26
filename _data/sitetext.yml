@@ -1,15 +1,20 @@
 en: &DEFAULT_EN
   header:
-    title: Instrumental Music For Flow-inducing doings. Jazzy. Energizing. Distraction-free.
-    body: "<a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'><img src='../assets/img/portfolio/forwards-and-towards-stellar-mammals-album-cover.jpg'></a>"
-    button: Listen on Spotify
-    buttonlink: "https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg"
+    title: Jazzy deep house, made in Venice Beach.
+    body: "<a href='https://artists.landr.com/991048507654'><img style='width:100%;max-width:300px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.45);' src='../assets/img/portfolio/frisbee-flow-state-cover.jpg' alt='Frisbee Flow State single cover'></a><br/><br/>New single <strong>Frisbee Flow State</strong>, first from the album <em>Palm Tree Party</em>. Out <strong>Aug 5</strong>."
+    button: Pre-save the single
+    buttonlink: "https://artists.landr.com/991048507654"
 
   about:
-    title: "Forwards & Towards by Stellar Mammals & Jacob Burgdorf"
-    text: "Music for creatives. Jazzy, energizing lofi beats for flow and concentrated, distraction-free doings."
-    body: "<a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'><img style='width: 100%; max-width: 450px;' src='../assets/img/portfolio/forwards-and-towards-stellar-mammals-album-cover.jpg'></a><br/> <br/> Listen on <a href='https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg'>Spotify</a>, <a href='https://music.apple.com/us/album/forwards-towards/1827335629'>Apple Music</a>, <a href='https://music.amazon.com/albums/B0FHXX3GBK'>Amazon Music</a>, <a href='https://www.youtube.com/watch?v=bakqHwhlCh8&list=OLAK5uy_nPH1jzIe0d0CDjFXxMI2hTSnt9XMcFbbE'>YouTube Music</a> and other streaming platforms. <br /> <br /> <em>[Check out our Liner Notes](http://www.markwk.com/forwards-and-towards-stellar-mammals-album.html)</em>"
+    title: "About"
+    text: "Venice Beach music producer. Music for energy, dance, focus, and chill."
+    body: "<img style='width:100%;max-width:320px;border-radius:12px;' src='../assets/img/portfolio/mark-venice-beach.jpg' alt='Mark Koester of Stellar Mammals at Venice Beach'><br/><br/>Stellar Mammals is the solo project of Venice Beach music producer Mark Koester. A producer-with-range catalog that runs from deep house with live trumpet and vocals to instrumental lofi and ambient soundscapes. Companion music for whatever you're doing.<br/><br/>The through-line is flow: showing up daily, finishing songs, and trusting there is no wrong way to make a song, and endless right ways. Forever a beginner, always becoming, always moving forwards and towards.<br/><br/>For questions, collaboration, or production work, reach out at <a href='mailto:stellarmammals@gmail.com'>stellarmammals@gmail.com</a>.<br/><br/><a href='/about.html'>More about Mark</a>. Writing and liner notes at <a href='http://www.markwk.com'>markwk.com</a>."
     section: about
+
+  portfolio:
+    title: The Full Catalog
+    text: "Every Stellar Mammals release in one place."
+    section: portfolio
 
   footer:
     legal: "Privacy Policy"
@@ -20,6 +25,8 @@ en: &DEFAULT_EN
         icon: "fab fa-instagram"
       - url: https://www.youtube.com/@stellarmammals
         icon: "fab fa-youtube"
+      - url: mailto:stellarmammals@gmail.com
+        icon: "fas fa-envelope"
 en-US:
   <<: *DEFAULT_EN
 en-CA:

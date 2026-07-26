@@ -1,12 +1,9 @@
-<!-- Navigation -->
+<!-- Navigation (homepage masthead nav — moon avatar + name). -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      {% if site.logo %}
-        <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}"/>
-      {% else %}
-        {{ site.title }}
-      {% endif %}
+    <a class="navbar-brand js-scroll-trigger" href="#page-top" style="display:inline-flex;align-items:center;gap:.55rem">
+      <img src="{{ '/assets/img/portfolio/avatar-moon.jpg' | relative_url }}" alt="Stellar Mammals" style="width:42px;height:42px;border-radius:50%;object-fit:cover">
+      <span>{{ site.title }}</span>
     </a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
@@ -17,7 +14,7 @@
         {% assign locale = site.locale | default: "en" %}
         {% for link in site.data.navigation[locale].nav %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+            <a class="nav-link js-scroll-trigger" href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a>
           </li>
         {% endfor %}
       </ul>
@@ -34,21 +31,28 @@
       {% if site.data.sitetext[locale].header.title %}
         <div class="intro-lead-in">{{ site.data.sitetext[locale].header.title | markdownify }}</div>
       {% endif %}
-      {% if site.data.sitetext[locale].header.button %}
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext[locale].header.buttonlink }}">{{ site.data.sitetext[locale].header.button }}</a>
-    {% endif %}
-      <!-- Streaming Links Section -->
-      <div class="streaming-links container mt-4">
+
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#signup" style="margin-bottom:.35rem">Let's Connect</a>
+
+      <!-- Listen Everywhere (streaming links) -->
+      <div class="streaming-links container mt-3">
         <p>Listen Everywhere:</p>
         <ul class="list-inline">
           {% for link in site.data.navigation[locale].streaming_links %}
             <li class="list-inline-item">
-              <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}{{ link.name }}</a>
             </li>
           {% endfor %}
         </ul>
       </div>
-      <!-- End Streaming Links Section -->
+
+      <!-- New single: cover + text, then pre-save -->
+      {% if site.data.sitetext[locale].header.body %}
+      <div class="intro-body" style="margin:1.25rem auto .75rem;color:#fff">{{ site.data.sitetext[locale].header.body }}</div>
+      {% endif %}
+      {% if site.data.sitetext[locale].header.button %}
+      <a class="btn btn-primary btn-xl text-uppercase" href="{{ site.data.sitetext[locale].header.buttonlink }}"{% if site.data.sitetext[locale].header.buttonlink contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ site.data.sitetext[locale].header.button }}</a>
+      {% endif %}
     </div>
   </div>
 </header>
