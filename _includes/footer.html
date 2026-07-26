@@ -1,0 +1,74 @@
+<!-- LOCAL OVERRIDE of theme _includes/footer.html.
+     Changes vs upstream: dark background (matches header) + light text; legal link is
+     root-absolute (relative_url) so it works on subdirectory pages. -->
+<style>
+  #footer { background-color: #1a1a1a !important; }
+  #footer, #footer .copyright, #footer a { color: #fff; }
+  /* keep social icons white (incl. on the theme's teal hover background) */
+  #footer .social-buttons a, #footer .social-buttons a:hover { color: #fff; }
+  /* teal hover only on the text quicklink (Privacy Policy) */
+  #footer .quicklinks a:hover { color: #509AB5; }
+</style>
+<!-- Footer -->
+<footer class="footer" id="footer" style="background-color: #1a1a1a">
+  <div class="container">
+    {% if site.locale and site.locale != "" and site.locale != nil %}
+    {% assign footer_data = site.data.sitetext[site.locale].footer %}
+    {% else %}
+    {% assign footer_data = site.data.sitetext.footer %}
+    {% endif %}
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <img src="{{ '/assets/img/portfolio/avatar-moon.jpg' | relative_url }}" alt="Stellar Mammals" style="width:34px;height:34px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:.5rem;border:1px solid rgba(255,255,255,.15)">
+        <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
+      </div>
+      <!-- Social Media -->
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          {% for link in footer_data.social %}
+          <li class="list-inline-item">
+            {% if link.url %}
+            <a href="{{ link.url }}">
+              {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- Legal -->
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="{{ '/legal.html' | relative_url }}">{{ footer_data.legal | default: "Privacy Policy" }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p style="color:#9a9a9a;font-size:.8rem;line-height:1.6;margin:1.25rem auto 0;max-width:46rem">
+          Stellar Mammals is a Venice Beach music producer. Jazzy deep house with live horns, plus lofi beats and ambient soundscapes for energy, dance, focus, and chill. Contact <a href="mailto:stellarmammals@gmail.com" style="color:#fff">stellarmammals@gmail.com</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+{% if page.layout == "page" %}
+<script>
+  fixPageShort();
+  function fixPageShort() {
+    if (window.innerHeight > document.body.offsetHeight) {
+      document.getElementById("footer").style.position = "fixed";
+      document.getElementById("footer").style.bottom = 0;
+      document.getElementById("footer").style.right = 0;
+      document.getElementById("footer").style.left = 0;
+      document.getElementById("footer").style.width = "100%";
+    }
+  }
+</script>
+{% endif %}
+<!-- End Footer -->

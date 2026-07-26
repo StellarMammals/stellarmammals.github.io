@@ -1,0 +1,82 @@
+<!-- LOCAL OVERRIDE of raviriley/agency-jekyll-theme _includes/head.html.
+     Only change vs upstream: local asset links use `relative_url` (root-absolute /assets/…)
+     instead of relative `assets/…`, so CSS loads on subdirectory (pretty-URL) pages too. -->
+<head>
+  {% if site.analytics.google %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "{{ site.analytics.google }}");
+  </script>
+  <!-- End Google Analytics -->
+  {% endif %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+
+  <title>{% if page.title %}{{ page.title | append: " | " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" rel="stylesheet" />
+
+  <!-- Custom fonts for this template -->
+  <link href="{{ '/assets/css/all.min.css' | relative_url }}" rel="stylesheet" type="text/css">
+  {% if site.data.style.fonts_urls %}
+    {% for font_url in site.data.style.fonts_urls %}
+      <link href="{{font_url}}" rel="stylesheet" type="text/css">
+    {% endfor %}
+  {% else %}
+    <link href="{{ '/assets/css/all.min.css' | relative_url }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  {% endif %}
+  <!-- Custom styles for this theme -->
+  <link href="{{ '/assets/css/agency.css' | relative_url }}" rel="stylesheet" />
+
+  <!-- Site tweaks -->
+  <style>
+    #about img,
+    .portfolio-item img { border-radius: 8px; }
+    .streaming-links i { font-size: 1.25rem; vertical-align: middle; margin-right: .35rem; }
+    .streaming-links .list-inline-item { margin: 0 .65rem; }
+    /* Hero: tighter top spacing so the single + pre-save sit above the fold */
+    .masthead { padding-top: 6rem !important; padding-bottom: 3rem !important; }
+    .masthead .intro-lead-in { margin-bottom: .5rem !important; }
+    /* Hero: drop-shadow so text stays readable over the busy background */
+    .masthead .intro-text { text-shadow: 0 2px 18px rgba(0,0,0,.9), 0 0 5px rgba(0,0,0,.6); }
+    /* Hero motion: subtle hover lift, matching the era cards */
+    .masthead .btn { transition: transform .15s ease, box-shadow .15s ease; }
+    .masthead .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+    .masthead .intro-body a { display: inline-block; transition: transform .2s ease; }
+    .masthead .intro-body a:hover { transform: translateY(-5px); }
+    .streaming-links .list-inline-item a { display: inline-block; transition: transform .15s ease; }
+    .streaming-links .list-inline-item a:hover { transform: translateY(-2px); }
+  </style>
+
+  <!-- Page container change top padding when nav shrinks -->
+  {% if page.layout == "page" %}
+  <style>
+    #pagecontainer {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer {
+        padding-top: 100px;
+      }
+    }
+  </style>
+  {% endif %}
+</head>

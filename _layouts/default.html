@@ -1,0 +1,34 @@
+<!-- LOCAL OVERRIDE of raviriley/agency-jekyll-theme _layouts/default.html.
+     Only change vs upstream: JS links use `relative_url` (root-absolute) so scripts load on
+     subdirectory (pretty-URL) pages too. -->
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}">
+
+  {% include head.html %}
+
+  <body id="page-top">
+
+      {{ content }}
+
+	  {% include genre-doors.html %}
+
+	  {% include email-signup.html %}
+
+	  {% include footer.html %}
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+	  <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="{{ '/assets/js/jquery.easing.min.js' | relative_url }}"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="{{ '/assets/js/jqBootstrapValidation.js' | relative_url }}"></script>
+	  <script src="{{ '/assets/js/contact_me.js' | relative_url }}"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="{{ '/assets/js/agency.min.js' | relative_url }}"></script>
+
+  </body>
+</html>

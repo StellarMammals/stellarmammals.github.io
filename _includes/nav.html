@@ -1,0 +1,24 @@
+<!-- Navigation (LOCAL OVERRIDE of theme nav.html) — subpage nav with moon avatar + name,
+     matching the homepage masthead nav. External links open a new tab. -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #212529">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="{{ '/' | relative_url }}" style="display:inline-flex;align-items:center;gap:.55rem">
+      <img src="{{ '/assets/img/portfolio/avatar-moon.jpg' | relative_url }}" alt="Stellar Mammals" style="width:42px;height:42px;border-radius:50%;object-fit:cover">
+      <span>{{ site.title }}</span>
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu<i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        {% assign locale = site.locale | default: "en" %}
+        {%- for link in site.data.navigation[locale].nav -%}
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->
