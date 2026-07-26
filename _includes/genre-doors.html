@@ -1,0 +1,44 @@
+<!-- Explore-by-era band. Rendered site-wide as a pre-footer strip (via _layouts/default.html).
+     Each card links to a genre page and uses a representative cover. -->
+<style>
+  #explore .era-card { display:block; text-decoration:none; color:inherit; transition:transform .15s ease; }
+  #explore .era-card:hover { transform:translateY(-4px); }
+  #explore .era-card img { width:150px; height:150px; object-fit:cover; border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,.45); }
+  #explore .era-card h4 { color:#fff; margin-top:1rem; }
+  #explore .era-card p { color:#b3b3b3; font-size:.9rem; margin:.25rem 0 0; }
+</style>
+<section class="page-section" id="explore" style="background-color:#242424;padding:3.5rem 0 3rem">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-heading text-uppercase" style="color:#fff">Explore by era</h2>
+        <h3 class="section-subheading" style="color:#b3b3b3">Three stages of the journey.</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-4 col-sm-6" style="margin-bottom:1.5rem">
+        <a class="era-card" href="{{ '/house-and-horns/' | relative_url }}">
+          <img src="{{ '/assets/img/portfolio/frisbee-flow-state-cover.jpg' | relative_url }}" alt="House & Horns">
+          <h4>House &amp; Horns</h4>
+          <p>Deep, jazzy house with live trumpet.</p>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6" style="margin-bottom:1.5rem">
+        <a class="era-card" href="{{ '/lofi/' | relative_url }}">
+          <img src="{{ '/assets/img/portfolio/forwards-and-towards-stellar-mammals-album-cover-thumbnail.jpg' | relative_url }}" alt="Lofi">
+          <h4>Lofi</h4>
+          <p>Jazzy, energizing beats for focus and flow.</p>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6" style="margin-bottom:1.5rem">
+        <a class="era-card" href="{{ '/ambient/' | relative_url }}">
+          <img src="{{ '/assets/img/portfolio/take-life-chill-stellar-mammals-album-cover-thumbnail.jpg' | relative_url }}" alt="Ambient">
+          <h4>Ambient</h4>
+          <p>Calm, atmospheric soundscapes and early tracks.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Explore-by-era band -->

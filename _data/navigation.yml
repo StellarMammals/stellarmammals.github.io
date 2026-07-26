@@ -11,22 +11,30 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "Listen on Spotify"
-      url: https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg
-    #- title: News and updates
-    #  url: https://stellarmammals.substack.com/
+    - title: "House & Horns"
+      url: /house-and-horns/
+    - title: "Lofi"
+      url: /lofi/
+    - title: "Ambient"
+      url: /ambient/
+    - title: "About"
+      url: /about.html
     - title: "More"
       url: http://www.markwk.com
 
   streaming_links:
   - name: Spotify
-    url: "https://open.spotify.com/album/4MuO4gypYoijYTvapOCvfW?si=-Tgl4LE5Qlyp0MPo4n8Rpg"
+    icon: "fab fa-spotify"
+    url: "https://open.spotify.com/artist/3DKlqxc1m82xgs01yuPM7l"
   - name: Apple Music
-    url: "https://music.apple.com/us/album/forwards-towards/1827335629"
+    icon: "fab fa-apple"
+    url: "https://music.apple.com/us/artist/stellar-mammals/1646024717"
   - name: Amazon Music
-    url: "https://music.amazon.com/albums/B0FHXX3GBK"
+    icon: "fab fa-amazon"
+    url: "https://music.amazon.com/artists/B0BFX6584X/stellar-mammals"
   - name: YouTube Music
-    url: "https://www.youtube.com/watch?v=bakqHwhlCh8&list=OLAK5uy_nPH1jzIe0d0CDjFXxMI2hTSnt9XMcFbbE"
+    icon: "fab fa-youtube"
+    url: "https://www.youtube.com/@stellarmammals"
   
 en-US:
   <<: *DEFAULT_EN
