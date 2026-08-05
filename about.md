@@ -94,7 +94,7 @@ title: About Stellar Mammals
 			</li>
 			<li>
 				<span class="yr">2026</span>
-				<div class="body">The house pivot. <em>Palm Tree Party</em>, deep house with live trumpet and vocals. Single <em>Frisbee Flow State</em> out Aug 5, album Aug 27.
+				<div class="body">The house pivot. <em>Palm Tree Party</em>, deep house with live trumpet and vocals. Single <em>Frisbee Flow State</em> out Aug 5, album Aug 28.
 					<div class="covers"><img src="{{ '/assets/img/portfolio/frisbee-flow-state-cover.jpg' | relative_url }}" alt="Frisbee Flow State"></div>
 				</div>
 			</li>

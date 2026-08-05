@@ -1,8 +1,8 @@
 en: &DEFAULT_EN
   header:
     title: Jazzy deep house, made in Venice Beach.
-    body: "<a href='https://artists.landr.com/991048507654'><img style='width:100%;max-width:300px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.45);' src='../assets/img/portfolio/frisbee-flow-state-cover.jpg' alt='Frisbee Flow State single cover'></a><br/><br/>New single <strong>Frisbee Flow State</strong>, first from the album <em>Palm Tree Party</em>. Out <strong>Aug 5</strong>."
-    button: Pre-save the single
+    body: "<a href='#' data-toggle='modal' data-target='#listen-modal'><img style='width:100%;max-width:300px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.45);' src='../assets/img/portfolio/frisbee-flow-state-cover.jpg' alt='Frisbee Flow State single cover'></a><br/><br/>New single <strong>Frisbee Flow State</strong>, first from the album <em>Palm Tree Party</em>. <strong>Out now.</strong>"
+    button: Listen now
     buttonlink: "https://artists.landr.com/991048507654"
 
   about:
@@ -12,8 +12,8 @@ en: &DEFAULT_EN
     section: about
 
   portfolio:
-    title: The Full Catalog
-    text: "Every Stellar Mammals release in one place."
+    title: Latest Releases
+    text: "A few of the newest. See the full catalog for every release."
     section: portfolio
 
   footer:

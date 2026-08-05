@@ -11,12 +11,18 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
+    - title: "Listen"
+      url: /music/
     - title: "House & Horns"
       url: /house-and-horns/
-    - title: "Lofi"
-      url: /lofi/
-    - title: "Ambient"
-      url: /ambient/
+    - title: "Genres"
+      children:
+        - title: "House & Horns"
+          url: /house-and-horns/
+        - title: "Lofi"
+          url: /lofi/
+        - title: "Ambient"
+          url: /ambient/
     - title: "About"
       url: /about.html
     - title: "More"

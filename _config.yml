@@ -31,6 +31,8 @@ locale: "en-US" # See available languages in _data/sitetext.yml
 analytics:
   google: G-KNMTBHWHR2
   #Google Analytics tracking code here
+  posthog: "phc_CSKYwG6TbDyiYog8A7yFsG5EWgK48dy6LXf9BeHi3obZ" # dedicated StellarMammals.com PostHog project (id 543186). Client key, safe to embed.
+  posthog_host: "https://us.i.posthog.com"
 
 collections:
   portfolio:

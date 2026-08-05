@@ -1,0 +1,35 @@
+<!-- Listen modal (our own): streaming links + Bandcamp (later) + full catalog.
+     Trigger from any element with: data-toggle="modal" data-target="#listen-modal" -->
+<div class="modal fade" id="listen-modal" tabindex="-1" role="dialog" aria-labelledby="listen-modal-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background:#212529;color:#fff;border:none;border-radius:14px">
+      <div class="modal-header" style="border:none;padding-bottom:0">
+        <h4 class="modal-title" id="listen-modal-title" style="margin:0;font-weight:700">Listen to Stellar Mammals</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff;opacity:.85;text-shadow:none"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body text-center" style="padding-top:.75rem">
+        <p style="color:#b9b9b9;margin-bottom:1rem">Stream on your platform of choice.</p>
+        <div style="display:flex;flex-direction:column;gap:.6rem;max-width:320px;margin:0 auto">
+          {% for link in site.data.navigation.en.streaming_links %}
+          <a class="btn btn-primary" href="{{ link.url }}" target="_blank" rel="noopener" data-listen="{{ link.name }}">{% if link.icon %}<i class="{{ link.icon }}"></i> {% endif %}{{ link.name }}</a>
+          {% endfor %}
+          <button class="btn" type="button" disabled style="background:#3a3f44;color:#9a9a9a;border:none;cursor:not-allowed"><i class="fab fa-bandcamp"></i> Buy on Bandcamp — coming soon</button>
+        </div>
+        <p style="margin-top:1.25rem;margin-bottom:.25rem"><a href="{{ '/music/' | relative_url }}" style="color:#509AB5;font-weight:600">Browse the full catalog &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+/* GA4 click tracking for the Listen modal + catalog (uses the site's gtag). */
+(function () {
+  function track(name, params) { if (window.gtag) { window.gtag('event', name, params || {}); } }
+  document.addEventListener('click', function (e) {
+    var s = e.target.closest('[data-listen]');
+    if (s) { track('listen_click', { platform: s.getAttribute('data-listen') }); return; }
+    if (e.target.closest('[data-target="#listen-modal"]')) { track('listen_modal_open', {}); return; }
+    var cat = e.target.closest('a[href$="/music/"], a[href$="/music"]');
+    if (cat) { track('view_full_catalog', {}); }
+  }, true);
+})();
+</script>

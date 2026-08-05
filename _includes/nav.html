@@ -13,9 +13,20 @@
       <ul class="navbar-nav text-uppercase ml-auto">
         {% assign locale = site.locale | default: "en" %}
         {%- for link in site.data.navigation[locale].nav -%}
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a>
-        </li>
+          {%- if link.children -%}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navdrop-{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+            <div class="dropdown-menu" aria-labelledby="navdrop-{{ forloop.index }}">
+              {%- for child in link.children -%}
+              <a class="dropdown-item" href="{{ child.url }}"{% if child.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ child.title }}</a>
+              {%- endfor -%}
+            </div>
+          </li>
+          {%- else -%}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a>
+          </li>
+          {%- endif -%}
         {%- endfor -%}
       </ul>
     </div>

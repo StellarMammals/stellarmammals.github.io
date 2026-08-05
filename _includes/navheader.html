@@ -13,9 +13,20 @@
       <ul class="navbar-nav text-uppercase ml-auto">
         {% assign locale = site.locale | default: "en" %}
         {% for link in site.data.navigation[locale].nav %}
+          {% if link.children %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navdrop-{{ forloop.index }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+            <div class="dropdown-menu" aria-labelledby="navdrop-{{ forloop.index }}">
+              {% for child in link.children %}
+              <a class="dropdown-item" href="{{ child.url }}"{% if child.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ child.title }}</a>
+              {% endfor %}
+            </div>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ link.title }}</a>
           </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div>
@@ -51,7 +62,7 @@
       <div class="intro-body" style="margin:1.25rem auto .75rem;color:#fff">{{ site.data.sitetext[locale].header.body }}</div>
       {% endif %}
       {% if site.data.sitetext[locale].header.button %}
-      <a class="btn btn-primary btn-xl text-uppercase" href="{{ site.data.sitetext[locale].header.buttonlink }}"{% if site.data.sitetext[locale].header.buttonlink contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ site.data.sitetext[locale].header.button }}</a>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#" data-toggle="modal" data-target="#listen-modal">{{ site.data.sitetext[locale].header.button }}</a>
       {% endif %}
     </div>
   </div>
